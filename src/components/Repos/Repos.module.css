@@ -1,0 +1,20 @@
+.repos {
+  padding: 16px;
+  border-radius: var(--br-radius);
+  border: 1px solid var(--color-primary);
+}
+
+.link {
+  margin-bottom: 10px;
+  color: var(--color-accent);
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.link:hover {
+  color: var(--color-accent-hover);
+}
+
+.text {
+  font-size: 13px;
+}

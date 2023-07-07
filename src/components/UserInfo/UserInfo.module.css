@@ -1,0 +1,53 @@
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  flex-grow: 0;
+  width: 150px;
+  height: 150px;
+  margin-right: 28px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.textTop {
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.textTop a {
+  font-family: 'Roboto Mono', monospace;
+  color: var(--color-accent);
+  text-transform: lowercase;
+  transition: var(--transition);
+}
+
+.textTop a:hover {
+  color: var(--color-accent-hover);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+}
+
+.stat:not(:last-child) {
+  position: relative;
+  margin-right: 26px;
+}
+
+.stat:not(:last-child)::after {
+  position: absolute;
+  content: '•';
+  right: -17px;
+  top: 1px;
+}
+
+.stat span,
+.site {
+  color: var(--color-accent);
+}

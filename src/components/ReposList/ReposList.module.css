@@ -1,0 +1,31 @@
+.content {
+  padding-top: 50px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.link:hover {
+  color: var(--color-accent-hover);
+}
+
+.reposList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}

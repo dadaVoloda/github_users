@@ -1,0 +1,24 @@
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.name {
+  color: var(--color-accent);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.name:hover {
+  color: var(--color-accent-hover);
+}
