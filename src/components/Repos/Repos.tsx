@@ -1,13 +1,25 @@
 import React, { FC } from 'react';
+
 import styles from './Repos.module.css';
 
-export const Repos: FC = () => {
+interface Props {
+  name: string;
+  description: string;
+  login: string;
+}
+
+export const Repos: FC<Props> = ({ name, description, login }) => {
   return (
     <div className={styles.repos}>
-      <a className={styles.link} href="#" target="_blank" rel="noreferrer">
-        body_matcher
+      <a
+        className={styles.link}
+        href={`https://github.com/${login}/${name}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {name}
       </a>
-      <p className={styles.text}>Simplify your view testing. Forget assert_select.</p>
+      <p className={styles.text}>{description}</p>
     </div>
   );
 };

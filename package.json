@@ -7,7 +7,9 @@
     "start": "cross-env NODE_ENV=development webpack serve",
     "build": "webpack",
     "eslint": "eslint --ext .ts,.tsx,.js ./",
-    "stylelint": "stylelint \"src/{**/*,*}.css\" --fix",
+    "eslint:fix": "eslint --ext .ts,.tsx,.js ./ --fix",
+    "stylelint": "stylelint \"src/{**/*,*}.css\"",
+    "stylelint:fix": "stylelint \"src/{**/*,*}.css\" --fix",
     "prettier": "prettier --write ./",
     "prettier-check": "prettier --check ./"
   },

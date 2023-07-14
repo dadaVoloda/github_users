@@ -5,7 +5,7 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
-  entry: './src/index.tsx',
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
   devtool: 'inline-source-map',
   output: {
     filename: 'bundle.[contenthash].js',
@@ -44,7 +44,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: path.resolve(__dirname, 'public', 'index.html'),
     }),
     new ESLintPlugin({
       files: '{**/*,*}.{tsx,js,ts}',

@@ -1,15 +1,39 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { usersUrl } from '../../api/api';
+import { formatNumber, pluralize } from '../../utils';
+
 import styles from './UserItem.module.css';
 
-export const UserItem: FC = () => {
+interface Props {
+  avatar: string;
+  login: string;
+}
+
+export const UserItem: FC<Props> = ({ avatar, login }) => {
+  const [company, setCompany] = useState('');
+  const [repos, setRepos] = useState(0);
+
+  useEffect(() => {
+    fetch(`${usersUrl}/${login}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setCompany(data.company);
+        setRepos(data.public_repos);
+      });
+  }, []);
+
   return (
     <div className={styles.user}>
-      <div className={styles.image}>img</div>
+      <img className={styles.image} src={avatar} alt="Avatar" />
       <div>
-        <a className={styles.name} href="#" target="_blank" rel="noreferrer">
-          defaukt
-        </a>
-        , 15&nbsp;репозиториев Название организации
+        <div>
+          <Link to={`/users/${login}`} className={styles.name}>
+            {login}
+          </Link>
+          , {formatNumber(repos)}&nbsp;{pluralize(repos, 'репозиторий')}
+        </div>
+        {!!company && <span> {company}</span>}
       </div>
     </div>
   );
