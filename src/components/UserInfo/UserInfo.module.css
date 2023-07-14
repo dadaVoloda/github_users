@@ -13,13 +13,13 @@
 
 .textTop {
   margin-bottom: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 30px;
   text-transform: uppercase;
 }
 
 .textTop a {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   color: var(--color-accent);
   text-transform: lowercase;
   transition: var(--transition);
@@ -41,7 +41,7 @@
 
 .stat:not(:last-child)::after {
   position: absolute;
-  content: '•';
+  content: "•";
   right: -17px;
   top: 1px;
 }

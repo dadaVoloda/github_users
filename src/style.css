@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@700&display=swap");
 
 :root {
-  --color-primary: #E5E5E5;
-  --color-accent: #F53;
+  --color-primary: #e5e5e5;
+  --color-accent: #f53;
   --color-accent-hover: #ff401a;
-  --color-dark: #262A2F;
-  --color-grey: #8A8A8A;
+  --color-dark: #262a2f;
+  --color-grey: #8a8a8a;
 
   --transition: 0.25s;
 
@@ -21,7 +21,7 @@
 /*font-family: 'Roboto', sans-serif;*/
 
 body {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 16px;
   line-height: 1.3;
   font-weight: 500;
@@ -40,7 +40,8 @@ a {
   color: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
