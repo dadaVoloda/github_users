@@ -13,7 +13,7 @@ export const Users = () => {
       })
       .then((data) => {
         if (data.length) {
-          setUsers(data.slice(0, 6));
+          setUsers(data.slice(0, 12));
         } else {
           throw new Error(data.message);
         }
